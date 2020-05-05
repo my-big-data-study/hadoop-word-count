@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// refine the name of the directory to generate libraries into
+libsDirName = '../data'
+
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Example MapReduce using Gradle', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.apache.hadoop:hadoop-core:1.2.1'
+    implementation 'org.apache.hadoop:hadoop-common:3.2.1'
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
