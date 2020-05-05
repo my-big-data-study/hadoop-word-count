@@ -22,7 +22,7 @@ docker-compose up -d
 
 ```bash
 # 进入容器内部
-docker exec -it --user hadoop `docker ps -q` bash
+docker exec -it --user hadoop `docker ps -l -q` bash
 
 # 在HDFS上新建 wordcount 目录
 hadoop fs -mkdir /wordcount
