@@ -3,7 +3,7 @@
 拉取Github上的仓库地址
 
 ```bash
-git clone https://github.com/data-community/hadoop-word-count.git
+git clone https://github.com/my-big-data-study/hadoop-word-count.git
 ```
 
 进入项目根目录，拉取镜像容器，并且启动伪分布的 Hadoop 镜像，会自动挂载 Data 目录到容器内
